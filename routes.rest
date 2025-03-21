@@ -1,0 +1,7 @@
+//LocalHost
+
+###Get all Family Tree
+GET http://localhost:3000/relatives
+
+###Get Relative by Id
+GET http://localhost:3000/relatives/67ddcb5dc79235e6de4ab2fd
