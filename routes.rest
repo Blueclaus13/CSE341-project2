@@ -1,7 +1,55 @@
 //LocalHost
 
+###Get 404 not found
+GET http://localhost:3000/
+
 ###Get all Family Tree
 GET http://localhost:3000/relatives
 
 ###Get Relative by Id
 GET http://localhost:3000/relatives/67ddcb5dc79235e6de4ab2fd
+
+###Create Contact
+POST http://localhost:3000/relatives HTTP/1.1
+Content-Type: application/json
+
+{
+    "firstName":"Oralia",
+    "lastName":"Ontiveros Gonzalez",
+    "birthday":"19/07/1961",
+    "deathday": null,
+    "sex":"female",
+    "maritalStatus":"widow",
+    "fatherName":"Juventino Ontiveros Tinajero",
+    "motherName":"Oralia Gonzale Gonzalez",
+    "children":["Claudia Oralia Madrid Ontiveros","Daniel Israel Madrid Ontiveros"],
+    "wifeName":"Jesus Francisco Madrid Rivera",
+    "lifeDescription": null,
+    "facts": null
+}
+
+
+###PUT Contact
+PUT http://localhost:3000/relatives/67ddcb5dc79235e6de4ab2fd HTTP/1.1
+Content-Type: application/json
+
+{
+    "firstName":"Jesus Francisco",
+    "lastName":"Madrid Rivera",
+    "birthday":"31/12/1952",
+    "deathday":"06/12/2002",
+    "sex":"male",
+    "maritalStatus":"married",
+    "fatherName":"Francisco Angel Madrid Salinas",
+    "motherName":"Aurelia Rivera Valadez",
+    "children":["Claudia Oralia Madrid Ontiveros","Daniel Israel Madrid Ontiveros"],
+    "wifeName":"Oralia Ontiveros Gonzalez",
+    "lifeDescription": "He was the first son of five. He worked in the family's a crane business",
+    "facts": null
+}
+
+### DELETE Contact
+DELETE http://localhost:3000/relatives/67ddfd2521a7b929a073eeb
+
+###Not Found
+GET http://localhost:3000/xxxxa
