@@ -1,0 +1,213 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "Family Tree API",
+    "description": "Family tree-project 2",
+    "version": "1.0.0"
+  },
+  "host": "",
+  "servers": [
+    {
+      "url": "http://localhost:3000",
+      "description": "Local Server"
+    },
+    {
+      "url": "https://cse341-project2-pijn.onrender.com",
+      "description": "Render Server"
+    }
+  ],
+  "basePath": "/",
+  "schemes": [
+    "http",
+    "https"
+  ],
+  "paths": {
+    "/relatives/": {
+      "get": {
+        "tags": [
+          "Relatives"
+        ],
+        "description": "",
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "relatives"
+        ],
+        "description": "",
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "firstName": {
+                  "example": "any"
+                },
+                "lastName": {
+                  "example": "any"
+                },
+                "birthday": {
+                  "example": "any"
+                },
+                "deathday": {
+                  "example": "any"
+                },
+                "sex": {
+                  "example": "any"
+                },
+                "maritalStatus": {
+                  "example": "any"
+                },
+                "fatherName": {
+                  "example": "any"
+                },
+                "motherName": {
+                  "example": "any"
+                },
+                "children": {
+                  "example": "any"
+                },
+                "wifeName": {
+                  "example": "any"
+                },
+                "lifeDescription": {
+                  "example": "any"
+                },
+                "facts": {
+                  "example": "any"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "No Content"
+          },
+          "400": {
+            "description": "Bad Request"
+          }
+        }
+      }
+    },
+    "/relatives/{id}": {
+      "get": {
+        "tags": [
+          "Relatives"
+        ],
+        "description": "",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "relatives"
+        ],
+        "description": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "firstName": {
+                  "example": "any"
+                },
+                "lastName": {
+                  "example": "any"
+                },
+                "birthday": {
+                  "example": "any"
+                },
+                "deathday": {
+                  "example": "any"
+                },
+                "sex": {
+                  "example": "any"
+                },
+                "maritalStatus": {
+                  "example": "any"
+                },
+                "fatherName": {
+                  "example": "any"
+                },
+                "motherName": {
+                  "example": "any"
+                },
+                "children": {
+                  "example": "any"
+                },
+                "wifeName": {
+                  "example": "any"
+                },
+                "lifeDescription": {
+                  "example": "any"
+                },
+                "facts": {
+                  "example": "any"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "No Content"
+          },
+          "400": {
+            "description": "Bad Request"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "relatives"
+        ],
+        "description": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "No Content"
+          }
+        }
+      }
+    }
+  }
+}

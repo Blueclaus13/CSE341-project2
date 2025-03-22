@@ -2,10 +2,20 @@ const swaggerAutogen = require('swagger-autogen')();
 
 const doc = {
   info: {
-    title: 'Contacts API',
-    description: 'API to get contacts'
+    title: 'Family Tree API',
+    description: 'Family tree-project 2'
   },
-  host: 'localhost:3000',
+  host:"",
+  servers: [
+    {
+      url: "http://localhost:3000",
+      description: "Local Server"
+    },
+    {
+      url: "https://cse341-project2-pijn.onrender.com",
+      description: "Render Server"
+    }
+  ],
   schemes: ['http', 'https']
 };
 
