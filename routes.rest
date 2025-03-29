@@ -7,7 +7,7 @@ GET http://localhost:3000/
 GET http://localhost:3000/relatives
 
 ###Get Relative by Id
-GET http://localhost:3000/relatives/67ddcb5dc79235e6de4ab2fd
+GET http://localhost:3000/relatives/67df8444e555b98f684d7195
 
 ###Create Relative
 POST http://localhost:3000/relatives HTTP/1.1
@@ -49,7 +49,7 @@ Content-Type: application/json
 }
 
 ### DELETE Relative
-DELETE http://localhost:3000/relatives/67ddfd2521a7b929a073eeb
+DELETE http://localhost:3000/relatives/67df8444e555b98f684d7195
 
 ________________________________________________________________________________
 

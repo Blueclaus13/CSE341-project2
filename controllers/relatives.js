@@ -24,6 +24,7 @@ const getSingle = async (req, res, next)=>{
     try {
         const relativeId = ObjectId.createFromHexString(req.params.id);
         const result = await mongodb.getDatabase().db().collection('madridOntiveros').find({_id: relativeId});
+        console.log(result)
         if(!result){
             throw createError(404,"Relative doesn't exist");
         }
